@@ -25,7 +25,8 @@ dependencies {
 	
 	
 	//mybatis 
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '3.0.3'
+
 	
 	//mariadb(선택)
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.4'

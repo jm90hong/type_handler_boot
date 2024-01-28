@@ -24,13 +24,13 @@ public class UserController {
 		return "ok";
 	}
 	
+	
 	@GetMapping("save")
 	public String save(
 				@RequestParam(value="id") String id,
 				@RequestParam(value="pw") String pw
 			) {
 	
-		
 		
 		User user = new User();
 		user.setId(id);
@@ -41,4 +41,5 @@ public class UserController {
 		
 		return "ok";
 	}
+	
 }
