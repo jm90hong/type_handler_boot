@@ -12,12 +12,12 @@
 	
 	<select id="findById" parameterType="String" resultMap="User">
 		SELECT * FROM user
-		WHERE id=id
+		WHERE id=#{id}
 	</select>
 	
 	<select id="findOne" parameterType="Integer" resultType="User">
 		SELECT * FROM user
-		WHERE user_idx=user_idx
+		WHERE user_idx=#{user_idx}
 	</select>
 	
 	<select id="findAll"  resultMap="User">
