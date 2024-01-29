@@ -9,7 +9,7 @@ public class AESUtil {
 
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
-    private static final String SECRET_KEY = "YourSecretKey"; // 실제로는 보안에 유의하여 키를 관리해야 합니다.
+    private static final String SECRET_KEY = "MySecretKey12345"; // 실제로는 보안에 유의하여 키를 관리해야 합니다.
 
     public static String encrypt(String plainText) throws Exception {
         SecretKey secretKey = new SecretKeySpec(SECRET_KEY.getBytes(), ALGORITHM);

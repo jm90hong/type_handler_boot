@@ -1,5 +1,7 @@
 package com.my.type_handler_boot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +24,29 @@ public class UserController {
 	public String health() {
 		
 		return "ok";
+	}
+	
+	@GetMapping("findOne")
+	public User findOne(
+				@RequestParam(value="user_idx") int user_idx
+			) {
+		
+		return userService.findOne(user_idx);
+	}
+	
+	
+	@GetMapping("findById")
+	public User findById(
+				@RequestParam(value="id") String id
+			) {
+		
+		return userService.findById(id);
+	}
+	
+	@GetMapping("findAll")
+	public List<User> findAll() {
+		
+		return userService.findAll();
 	}
 	
 	

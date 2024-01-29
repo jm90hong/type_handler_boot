@@ -1,15 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
- 
+
+
+	<!-- <typeAliases>
+        <typeAlias type="com.my.type_handler_boot.type_handler.AesTypeHandler" alias="AesTypeHandler" />
+    </typeAliases>    
+
+
+    <typeHandlers>
+        <typeHandler handler="com.my.type_handler_boot.type_handler.AesTypeHandler"/>
+        
+    </typeHandlers> -->
+    
+    
     <typeAliases>
-        <typeAlias type="com.pure.test.typehandler.EmailCipherTypeHandler" alias="EmailCipherTypeHandler" />
-        <typeAlias type="com.pure.test.typehandler.MobileCipherTypeHandler" alias="MobileCipherTypeHandler" />
+        <typeAlias type="com.my.type_handler_boot.type_handler.IdCipherTypeHandler" alias="IdCipherTypeHandler" />
     </typeAliases>    
     
     <typeHandlers>
-        <typeHandler handler="com.pure.test.typehandler.EmailCipherTypeHandler"/>
-        <typeHandler handler="com.pure.test.typehandler.MobileCipherTypeHandler"/>
+        <typeHandler handler="com.my.type_handler_boot.type_handler.IdCipherTypeHandler"/>
     </typeHandlers>
     
 </configuration>

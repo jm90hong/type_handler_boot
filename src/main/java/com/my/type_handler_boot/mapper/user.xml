@@ -6,8 +6,27 @@
 		INSERT INTO user
 		(id,pw,created_date)
 		VALUES
-		(#{id}, #{pw}, SYSDATE())
+		(#{id, typeHandler=IdCipherTypeHandler}, #{pw}, SYSDATE())
 	</insert>
 	 		
 	
+	<select id="findById" parameterType="String" resultMap="User">
+		SELECT * FROM user
+		WHERE id=id
+	</select>
+	
+	<select id="findOne" parameterType="Integer" resultType="User">
+		SELECT * FROM user
+		WHERE user_idx=user_idx
+	</select>
+	
+	<select id="findAll"  resultMap="User">
+		SELECT * FROM user
+	</select>
+	
+	
+	<resultMap type="User" id="User">
+        <result column="id" property="id" typeHandler="IdCipherTypeHandler" />
+    </resultMap>
+    
 </mapper>
